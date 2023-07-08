@@ -4,7 +4,7 @@ const Question = require('../model/question');
 export const getComment = async (req, res) => {
     try {
         const {questionId} = req.body;
-        const comments = Comment.find({ questionId: questionId });
+        const comments = await Comment.find({ questionId: questionId });
         res.status(201).json(comments);
     } catch (error) {
         res.status(404).json(error);
