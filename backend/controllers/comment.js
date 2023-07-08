@@ -1,7 +1,7 @@
 const Comment = require('../model/comment');
 const Question = require('../model/question');
 
-export const getComment = async (req, res) => {
+exports.getComment = async (req, res) => {
     try {
         const {questionId} = req.body;
         const comments = await Comment.find({ questionId: questionId });
@@ -11,7 +11,7 @@ export const getComment = async (req, res) => {
     }
 }
 
-export const createComment = async (req, res) => {
+exports.createComment = async (req, res) => {
     try {
         const {
             commentText,

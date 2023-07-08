@@ -2,7 +2,7 @@ const express = require('express');
 const questionRouter = express.Router();
 const {getQuestion, createQuestion} = require('../controllers/question');
 
-questionRouter.get('/question', getQuestion);
-questionRouter.post('/question', createQuestion);
+questionRouter.get('/', getQuestion);
+questionRouter.post('/', createQuestion);
 
-export default questionRouter;
+module.exports = questionRouter;

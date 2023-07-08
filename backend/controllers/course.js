@@ -1,7 +1,7 @@
 const Course = require('../model/course');
 const User = require('../model/user');
 
-export const createCourse = async (req, res) => {
+exports.createCourse = async (req, res) => {
     try {
         const {
             courseTitle,
@@ -35,7 +35,7 @@ export const createCourse = async (req, res) => {
     }
 };
 
-export const getAllCourses = async (req, res) => {
+exports.getAllCourses = async (req, res) => {
     try {
         const courses = await Course.find();
         res.status(201).json(courses);
@@ -44,7 +44,7 @@ export const getAllCourses = async (req, res) => {
     }
 };
 
-export const getRecommendedCourses = async (req, res) => {
+exports.getRecommendedCourses = async (req, res) => {
     try {
         const category = req.params;
         const courses = await Course.find({ category: category });
@@ -54,7 +54,7 @@ export const getRecommendedCourses = async (req, res) => {
     }
 }
 
-export const addToMyCourse = async (req, res) => {
+exports.addToMyCourse = async (req, res) => {
     try {
         const {userId, courseId} = req.body();
         const user = User.find({ userId });
@@ -69,7 +69,7 @@ export const addToMyCourse = async (req, res) => {
     }
 }
 
-export const getMyCourses = async (req, res) => {
+exports.getMyCourses = async (req, res) => {
     try {
         const {userId} = req.body;
         const user = User.find({ userId });
@@ -81,7 +81,7 @@ export const getMyCourses = async (req, res) => {
     }
 };
 
-export const getSingleCourse = async (req, res) => {
+exports.getSingleCourse = async (req, res) => {
     try {
         const { courseId } = req.params;
         const course = await Course.find({ courseId });

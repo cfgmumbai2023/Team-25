@@ -1,6 +1,6 @@
 const Question = require('../model/question');
 
-export const getQuestion = async (req, res) => {
+exports.getQuestion = async (req, res) => {
     try {
         const {videoId} = req.body();
         const questions = await Question.find({ videoId: videoId });
@@ -10,7 +10,7 @@ export const getQuestion = async (req, res) => {
     }
 };
 
-export const createQuestion = async (req, res) => {
+exports.createQuestion = async (req, res) => {
     try {
         const {
             questionBody,
