@@ -199,7 +199,7 @@ function Login({ setIsAuthenticated }) {
           <form className='sign-up-form'>
             <h1>Create Account</h1>
             <div className='social-container'>
-              <a href='https://www.facebook.com' className='social'>
+              {/* <a href='https://www.facebook.com' className='social'>
                 <FacebookIcon />
               </a>
               <a href='https://www.google.com' className='social'>
@@ -207,7 +207,7 @@ function Login({ setIsAuthenticated }) {
               </a>
               <a href='https://www.linkedin.com' className='social'>
                 <LinkedInIcon />
-              </a>
+              </a> */}
             </div>
             <input
               value={signupData.firstName}
