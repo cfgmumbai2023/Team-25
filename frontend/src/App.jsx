@@ -8,6 +8,7 @@ import Home from './pages/Home/Home'
 import Profile from './ProfilePage/Profile'
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
+import Aboutus from './components/Aboutus'
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -27,7 +28,8 @@ function App() {
   console.log(user)
 
   return (
-    <div>
+   
+    <div >
       <Navbar isAuthenticated={isAuthenticated} user={user} />
       <Routes>
         <Route
@@ -45,9 +47,11 @@ function App() {
           path='/login'
           element={<Login setIsAuthenticated={setIsAuthenticated} />}
         ></Route>
+        <Route path="/Aboutus" element={<Aboutus/>}/>
       </Routes>
       <Bottom />
     </div>
+    
   )
 }
 

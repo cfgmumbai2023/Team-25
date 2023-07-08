@@ -1,9 +1,12 @@
 import React from 'react'
 import FeatureBox from './FeatureBox'
-import featureimage1 from '../images/home_com.jpg'
+import featureimage1 from '../images/images1.jpeg'
 
 function Feature() {
+  const images1 = [
+  ];
   return (
+    
     <div className='f-main'>
       <div>
         <h1 className='feature-head'>
@@ -15,19 +18,25 @@ function Feature() {
         <div className='a-container'>
           <FeatureBox
             image={featureimage1}
-            title='Title One'
+            title='Igor stimac'
             details='loremipsum'
           />
           <FeatureBox
             image={featureimage1}
-            title='Title Two'
+            title='Igor stimac'
             details='loremipsum'
           />
           <FeatureBox
             image={featureimage1}
-            title='Title Three'
+            title='Igor stimac'
             details='loremipsum'
           />
+          <FeatureBox
+            image={featureimage1}
+            title='Igor stimac'
+            details='loremipsum'
+          />
+          
         </div>
       </div>
     </div>
