@@ -18,6 +18,7 @@ exports.createQuestion = async (req, res) => {
             videoId
         } = req.body;
 
+
         const newQuestion = new Question({
             questionBody,
             postedBy,

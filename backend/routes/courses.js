@@ -4,8 +4,8 @@ const courseRouter = express.Router();
 
 courseRouter.post('/', createCourse);
 courseRouter.get('/', getAllCourses);
-courseRouter.get('/:category', getRecommendedCourses);
+courseRouter.get('/find/:category', getRecommendedCourses);
 courseRouter.get('/:id', getSingleCourse);
-courseRouter.get('/mycoures/:userId', getMyCourses);
+courseRouter.get('/mycourses/:userId', getMyCourses);
 
 module.exports = courseRouter;
