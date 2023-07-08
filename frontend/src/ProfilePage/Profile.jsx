@@ -187,7 +187,7 @@ function Profile() {
 
             <button
               type="button"
-              class="btn btn-primary"
+              class="btn btn-primary mt-3"
               data-toggle="modal"
               data-target="#exampleModalCenter"
             >

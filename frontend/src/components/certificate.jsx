@@ -42,6 +42,7 @@ function Certificate() {
                       Apply now
                     </a>
                   </div>
+                  
                 </div>
               </>
             
