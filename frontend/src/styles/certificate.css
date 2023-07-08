@@ -1,0 +1,100 @@
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0 15px;
+  }
+  
+  .my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-primary {
+    color: #007bff;
+  }
+  
+  .img-thumbnail {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    background-color: #fff;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .mt-5 {
+    margin-top: 3rem;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .grid-sm-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .card-title {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .card-text {
+    margin-bottom: 1rem;
+  }
+  
+  .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+  
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  }
+  .download-bttn {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .download-bttn:hover {
+    background-color: darkblue;
+  }
+  
