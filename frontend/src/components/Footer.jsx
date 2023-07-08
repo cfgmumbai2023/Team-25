@@ -65,7 +65,7 @@ export default function Footer(){
             <Link to="/Aboutus" class="text-reset">About us</Link>
           </p>
           <p>
-            <Link to="/" class="text-reset">Courses</Link>
+            <Link to="/Courses" class="text-reset">Courses</Link>
           </p>
           <p>
             <Link to="/Blogs" class="text-reset">Blogs</Link>
