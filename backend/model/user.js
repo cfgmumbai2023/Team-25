@@ -34,12 +34,18 @@ const userSchema = new mongoose.Schema(
       type: Number,
     },
     certificate: [
-      {
-        type: String,
-      },
+        {
+            type: String
+        }
     ],
-  },
-  { timestamps: true }
-)
+    courses: [
+        {
+            type: mongoose.Types.ObjectId,
+            ref: "Course"
+        }
+    ]
+},
+{ timestamps : true}
+);
 
 module.exports = mongoose.model('User', userSchema)
