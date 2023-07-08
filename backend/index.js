@@ -4,6 +4,9 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 require('dotenv').config()
 var authRoutes = require('./routes/auth')
+const courseRouter = require('./routes/courses')
+const questionRouter = require('./routes/question')
+const commentRouter = require('./routes/comment')
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -15,6 +18,10 @@ app.use('/api', authRoutes)
 app.get('/', (req, res) => {
   res.send('Backend is setup and running!')
 })
+
+app.get('/courses', courseRouter);
+app.get('/question', questionRouter);
+app.get('/comment', commentRouter);
 
 //connencting to backend
 const connectionParams = {
