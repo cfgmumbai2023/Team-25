@@ -112,7 +112,7 @@ function Profile() {
         <>
           {/* <h5>Your Achievements</h5>
           <Achievements /> */}
-              
+
               <div class="form-group">
                 <label for="exampleInputPassword1">Sports</label>
                 <input
@@ -187,7 +187,7 @@ function Profile() {
 
             <button
               type="button"
-              class="btn btn-primary"
+              class="btn btn-primary mt-3"
               data-toggle="modal"
               data-target="#exampleModalCenter"
             >
@@ -196,8 +196,20 @@ function Profile() {
           </div>
         </div>
 
-        <h5>Your Achievements</h5>
-        <Achievements />
+        
+
+        {details.type === "Coach" ? (
+          <>
+          <h5>Your Achievements</h5>
+            <Achievements />
+          </>
+        ) : (
+          <>
+            <div className="container">
+              <button className="btn btn-primary">Upload Course</button>
+            </div>
+          </>
+        )}
 
         <Courses />
       </div>

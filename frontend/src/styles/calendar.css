@@ -1,0 +1,140 @@
+/* App.css */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
+
+/* Global Styles */
+body {
+  background-color: #f5f5f5;
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* Heading Styles */
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.heading h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #888;
+  margin-top: 0;
+}
+
+/* Form Styles */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input[type="text"],
+.form-container input[type="text"]:focus {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-container button {
+  width: 200px;
+  padding: 12px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #555;
+}
+
+/* Calendar Styles */
+.calendar-container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.rbc-calendar {
+  height: 500px;
+}
+
+.rbc-header {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.rbc-header + .rbc-header {
+  border-top: none;
+}
+
+.rbc-day-bg + .rbc-day-bg {
+  border-left: 1px solid #ddd;
+}
+
+.rbc-today {
+  background-color: #f5f5f5;
+}
+
+.rbc-event {
+  border-radius: 5px;
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rbc-event:hover {
+  background-color: #0056b3;
+}
+
+/* Date Picker Styles */
+.react-datepicker-wrapper {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  font-size: 16px;
+  color: #333;
+}
+
+.react-datepicker__input-container input::placeholder {
+  color: #888;
+}
