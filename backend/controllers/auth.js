@@ -1,4 +1,4 @@
-var User = require('../models/User.js')
+var User = require('../model/user.js')
 var jwt = require('jsonwebtoken')
 var bcrypt = require('bcrypt')
 const { createJWT, createRefreshJWT } = require('../utils/auth')
@@ -8,25 +8,17 @@ const emailRegexp =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 
 exports.signup = (req, res, next) => {
-  let { email, userName, password } = req.body
-
-  let errors = []
-
-  if (!email) {
-    errors.push({ email: 'required' })
-  }
-  if (!emailRegexp.test(email)) {
-    errors.push({ email: 'invalid' })
-  }
-  if (!userName) {
-    errors.push({ userName: 'required' })
-  }
-  if (!password) {
-    errors.push({ password: 'required' })
-  }
-  if (errors.length > 0) {
-    return res.status(422).json({ errors: errors })
-  }
+  let {
+    firstName,
+    lastName,
+    email,
+    type,
+    mobile,
+    password,
+    sports,
+    yearOfExperience,
+    certificate,
+  } = req.body
 
   User.findOne({ email: email })
     .then((user) => {
@@ -36,9 +28,15 @@ exports.signup = (req, res, next) => {
           .json({ errors: [{ user: 'email already exists' }] })
       } else {
         const user = new User({
-          userName: userName,
-          email: email,
-          password: password,
+          firstName,
+          lastName,
+          email,
+          type,
+          mobile,
+          password,
+          sports,
+          yearOfExperience,
+          certificate,
         })
 
         bcrypt.genSalt(10, function (err, salt) {
@@ -63,7 +61,7 @@ exports.signup = (req, res, next) => {
                   success: true,
                   access_token: access_token,
                   refresh_token: refresh_token,
-                  message: user,
+                  // message: user,
                 })
               })
               .catch((err) => {
@@ -103,7 +101,7 @@ exports.signin = (req, res) => {
     return res.status(422).json({ errors: errors })
   }
 
-  User.findOne({ $or: [{ email: email }, { userName: email }] })
+  User.findOne({ email: email })
     .then((user) => {
       if (!user) {
         return res.status(404).json({
@@ -135,7 +133,14 @@ exports.signin = (req, res) => {
             refreshTokens.push(refresh_token)
 
             res.json({
-              userName: user.userName,
+              firstName: user.firstName,
+              lastName: user.lastName,
+              email: user.email,
+              type: user.type,
+              mobile: user.mobile,
+              sports: user.sports,
+              yearOfExperience: user.yearOfExperience,
+              certificate: user.certificate,
               access_token,
               refresh_token,
               _id: user._id,
