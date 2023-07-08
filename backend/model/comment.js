@@ -11,17 +11,7 @@ const commentSchema = new mongoose.Schema({
     questionId: {
         type: mongoose.Types.ObjectId,
         ref: "Question"
-    },
-    likeCount: {
-        type: Number
-    },
-    likedBy: [
-        {
-            type: mongoose.Types.ObjectId, 
-            ref:"User"        
-        }
-    ],
-
+    }
 },
 { timestamps : true}
 );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../images/Guitara-logo1.png'
-import avatar from '../images/avatar.svg'
+// import logo from '../images/football.png'
 import { Link } from 'react-router-dom'
+
 
 function Navbar({ isAuthenticated, user }) {
   // const [nav, setnav] = useState(false);
@@ -28,7 +28,7 @@ function Navbar({ isAuthenticated, user }) {
   return (
     <nav className='nav'>
       <Link to='/' className='logo'>
-        <img src={logo} alt='' />
+        {/* <img src={logo} alt='' /> */}<h1 >Football</h1>
       </Link>
       <input type='checkbox' className='menu-btn' id='menu-btn' />
       <label className='menu-icon' for='menu-btn'>
@@ -36,16 +36,22 @@ function Navbar({ isAuthenticated, user }) {
       </label>
       <ul className='menu'>
         <li>
-          <Link to='/exercises'>Home</Link>
+          <Link to='/'>Home</Link>
         </li>
         <li>
-          <Link to='/lessons'>Courses</Link>
+          <Link to='/Aboutus'>About</Link>
         </li>
         <li>
-          <Link to='/tools'>Blogs</Link>
+          <Link to='/courses'>Courses</Link>
         </li>
         <li>
-          <Link to='/about'>Interview</Link>
+          <Link to='/blogs'>Blogs</Link>
+        </li>
+        <li>
+          <Link to='/interview'>Interview</Link>
+        </li>
+        <li>
+          <Link to='/profile'>Profile</Link>
         </li>
        
 
