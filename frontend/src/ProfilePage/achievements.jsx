@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-export default function Instructor() {
-    return (
-        <>
-            <div className="mt-5">
+function Achievements() {
+  return (
+    <>
+      <div className="mt-5">
         <div className="shadow-lg md:w-50 w-100">
           <ul class="list-group list-group-light">
             <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -79,6 +79,8 @@ export default function Instructor() {
           </ul>
         </div>
       </div>
-        </>
-    )
+    </>
+  );
 }
+
+export default Achievements;
