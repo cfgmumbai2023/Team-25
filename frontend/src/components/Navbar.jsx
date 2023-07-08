@@ -36,16 +36,19 @@ function Navbar({ isAuthenticated, user }) {
       </label>
       <ul className='menu'>
         <li>
-          <Link to='/exercises'>Home</Link>
+          <Link to='/home'>Home</Link>
         </li>
         <li>
-          <Link to='/lessons'>Courses</Link>
+          <Link to='/about'>About</Link>
         </li>
         <li>
-          <Link to='/tools'>Blogs</Link>
+          <Link to='/courses'>Courses</Link>
         </li>
         <li>
-          <Link to='/about'>Interview</Link>
+          <Link to='/blogs'>Blogs</Link>
+        </li>
+        <li>
+          <Link to='/interview'>Interview</Link>
         </li>
        
 
