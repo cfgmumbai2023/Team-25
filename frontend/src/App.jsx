@@ -5,6 +5,8 @@ import Bottom from './components/Bottom'
 import Navbar from './components/Navbar'
 import Login from './pages/Login/Login'
 import Home from './pages/Home/Home'
+import Profile from './ProfilePage/Profile'
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
 
 function App() {
@@ -32,6 +34,11 @@ function App() {
           exact
           path='/'
           element={<Home isAuthenticated={isAuthenticated} />}
+        ></Route>
+        <Route
+          exact
+          path='/profile'
+          element={<Profile isAuthenticated={isAuthenticated} />}
         ></Route>
         <Route
           exact

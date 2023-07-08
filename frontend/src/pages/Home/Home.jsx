@@ -4,6 +4,7 @@ import Feature from '../../components/Feature'
 import CommunityCard from '../../components/community_card'
 import Carousal from '../../components/Carousal'
 
+
 const Home = () => {
   return (
     <div>

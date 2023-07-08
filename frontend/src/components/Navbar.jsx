@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import logo from '../images/Guitara-logo1.png'
-import avatar from '../images/avatar.svg'
 import { Link } from 'react-router-dom'
+
 
 function Navbar({ isAuthenticated, user }) {
   // const [nav, setnav] = useState(false);
@@ -46,6 +46,9 @@ function Navbar({ isAuthenticated, user }) {
         </li>
         <li>
           <Link to='/about'>Interview</Link>
+        </li>
+        <li>
+          <Link to='/profile'>Profile</Link>
         </li>
        
 
