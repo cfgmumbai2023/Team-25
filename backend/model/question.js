@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
 
 const questionSchema = new mongoose.Schema({
-    questionTitle: {
-        type: String
-    },
     questionBody: {
         type: String
     },
@@ -11,16 +8,10 @@ const questionSchema = new mongoose.Schema({
         type: mongoose.Types.ObjectId, 
         ref:"User"
     },
-    likeCount: {
-        type: Number, 
-        default: 0
-    },
-    likedBy: [
-        {
-            type: mongoose.Types.ObjectId, 
-            ref:"User"        
-        }
-    ]
+    videoId: {
+        type: mongoose.Types.ObjectId,
+        ref: "Video"
+    }
 },
 { timestamps : true}
 );
