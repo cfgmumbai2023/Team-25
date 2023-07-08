@@ -5,7 +5,7 @@
 }
 
 .body-login {
-  background: #ef6600;
+  background: #00BFFF;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +51,7 @@
 .login-container button {
   border-radius: 20px;
   border: 1px solid #ef6600;
-  background-color: #ef6600;
+  background-color: #1E90FF;
   width: max-content;
   color: #ffffff;
   font-size: 12px;
@@ -106,7 +106,7 @@
 }
 
 .login-container .form-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
