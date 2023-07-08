@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import logo from '../images/Guitara-logo1.png'
 import avatar from '../images/avatar.svg'
+import { Link } from 'react-router-dom'
 
 function Navbar({ isAuthenticated, user }) {
   // const [nav, setnav] = useState(false);
@@ -26,57 +27,43 @@ function Navbar({ isAuthenticated, user }) {
   console.log(path === '/community')
   return (
     <nav className='nav'>
-      <a href='/' className='logo'>
+      <Link to='/' className='logo'>
         <img src={logo} alt='' />
-      </a>
+      </Link>
       <input type='checkbox' className='menu-btn' id='menu-btn' />
       <label className='menu-icon' for='menu-btn'>
         <span className='nav-icon'></span>
       </label>
       <ul className='menu'>
         <li>
-          <a href='/exercises'>Exercises</a>
+          <Link to='/exercises'>Home</Link>
         </li>
         <li>
-          <a href='/lessons'>Lessons</a>
+          <Link to='/lessons'>Courses</Link>
         </li>
         <li>
-          <a href='/tools'>Tools</a>
+          <Link to='/tools'>Blogs</Link>
         </li>
         <li>
-          <a href='/about'>About</a>
+          <Link to='/about'>Interview</Link>
         </li>
-        <li>
-          {isAuthenticated && path === '/community' ? (
-            <li>
-              <a href='/community/createPost' className='active'>
-                CreatePost
-              </a>
-            </li>
-          ) : (
-            <a href='/community'>Community</a>
-          )}
-        </li>
+       
 
         {isAuthenticated ? (
           <div className='new'>
-            <div className='avatar'>
-              <a href='/community/profile'>
-                <img src={avatar} alt='' />
-              </a>
-            </div>
+            
             <li>
-              <a href='/login' className='active' onClick={deleteItem}>
+              <Link to='/login' className='active' onClick={deleteItem}>
                 Logout
-              </a>
+              </Link>
             </li>
-            {path === '/community' ? <div></div> : <div></div>}
+            
           </div>
         ) : (
           <li>
-            <a href='/login' className='active'>
+            <Link to='/login' className='active'>
               Login
-            </a>
+            </Link>
           </li>
         )}
       </ul>
