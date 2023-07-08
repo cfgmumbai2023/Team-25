@@ -1,7 +1,12 @@
 import React from 'react'
-
+import 'bootstrap/dist/css/bootstrap.css';
+import Profile from './ProfilePage/Profile';
 const App = () => {
-  return <div>App</div>
+  return( <div>
+    <Profile />
+    
+  </div>
+  );
 }
 
 export default App
