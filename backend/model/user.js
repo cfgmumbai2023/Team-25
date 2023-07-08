@@ -35,7 +35,7 @@ const userSchema = new mongoose.Schema(
     },
     certificate: [
         {
-            type: string
+            type: String
         }
     ],
     courses: [

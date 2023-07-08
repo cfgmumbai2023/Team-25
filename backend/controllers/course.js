@@ -54,10 +54,28 @@ export const getRecommendedCourses = async (req, res) => {
     }
 }
 
+export const addToMyCourse = async (req, res) => {
+    try {
+        const {userId, courseId} = req.body();
+        const user = User.find({ userId });
+
+        user.courses.push(courseId);
+
+        await user.save();
+
+        res.status(201).json(user);
+    } catch (error) {
+        res.status(404).json(error);
+    }
+}
+
 export const getMyCourses = async (req, res) => {
     try {
         const {userId} = req.body;
-        //implement
+        const user = User.find({ userId });
+        const mycoures = user.courses;
+
+        res.status(201).json(mycoures);
     } catch (error) {
         res.status(404).json(error);
     }
