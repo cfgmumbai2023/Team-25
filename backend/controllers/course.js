@@ -13,8 +13,7 @@ exports.createCourse = async (req, res) => {
             duration,
             numberOfModule,
             videoUrl
-        } = req.body();
-
+        } = req.body;
         const newCourse = new Course({
             courseTitle,
             description,
@@ -26,10 +25,8 @@ exports.createCourse = async (req, res) => {
             numberOfModule,
             videoUrl 
         });
-
         await newCourse.save();
-
-        res.staus(201).json(newCourse);
+        res.status(201).json(newCourse);
     } catch (error) {
         res.status(404).json(error);
     }
@@ -40,13 +37,14 @@ exports.getAllCourses = async (req, res) => {
         const courses = await Course.find();
         res.status(201).json(courses);
     } catch (error) {
-        res.status(404).json(courses);
+        res.status(404).json(error);
     }
 };
 
 exports.getRecommendedCourses = async (req, res) => {
     try {
-        const category = req.params;
+        console.log(req)
+        const category = req.params.category;
         const courses = await Course.find({ category: category });
         res.status(201).json(courses);
     } catch (error) {
@@ -71,11 +69,13 @@ exports.addToMyCourse = async (req, res) => {
 
 exports.getMyCourses = async (req, res) => {
     try {
-        const {userId} = req.body;
-        const user = User.find({ userId });
+        const {userId} = req.params;
+        const user = User.find({ _id: userId });
+        if(!user) res.status(404).json({error: "did not find"});
+        console.log(user);  
         const mycoures = user.courses;
 
-        res.status(201).json(mycoures);
+        res.status(201).json({mycoures});
     } catch (error) {
         res.status(404).json(error);
     }
@@ -83,8 +83,12 @@ exports.getMyCourses = async (req, res) => {
 
 exports.getSingleCourse = async (req, res) => {
     try {
-        const { courseId } = req.params;
-        const course = await Course.find({ courseId });
+        const { id } = req.params;
+        const course = await Course.find({_id: id });
+
+        console.log(course);
+
+        if(!course) res.status(201).json({error: "did not find"});
         res.status(201).json(course);
     } catch (error) {
         res.status(404).json(error);

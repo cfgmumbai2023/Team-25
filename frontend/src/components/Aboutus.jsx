@@ -1,68 +1,67 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import "../css/About.css";
 
 
-export default function Aboutus(){
+const AboutUs = () => {
   return (
-    <div className="main">
-      <section className="about-section">
-        <div className="container">
-            <div className="row">                
-                <div className="content-column col-lg-6 col-md-12 col-sm-12 order-2">
-                    <div className="inner-column">
-                        <div className="sec-title">
-                            <span className="title">About Css3transition</span>
-                            <h2>We are Creative Tech Enthusiast working since 2015</h2>
-                        </div>
-                        <div className="text">I am Rahul Yaduvanshi works at Css3 Transition since last 3 years. We are here to provide touch notch solution for your website or web application that helps you to make your website look attractive & efficient in handling by creating usefull plugins thats you need.</div>
-                      <div className="text">
-                        We are here to serve you next level tutorial that currently in trend to match you with your expertise. Css3 transition is a learning website. where you can find many good quality content related to web development and tutorials about plugins. here we are using html, html5, css, css3, jquery & javascript along with inspirational UI design layout by professionals by using Photoshop and adobe allustrator.
-                      </div>
-                        <div className="btn-box">
-                            <Link to="#" className="theme-btn btn-style-one">Contact Us</Link>
-                        </div>
-                    </div>
-                </div>
-
-               
-                <div className="image-column col-lg-6 col-md-12 col-sm-12">
-                    <div className="inner-column wow fadeInLeft">
-                      <div className="author-desc">
-                        <h2>Rahul Kumar Yadav</h2>
-                        <span>Web Developer</span>
-                      </div>
-                        <figure className="image-1"><Link to="#" className="lightbox-image" data-fancybox="images"><img title="Rahul Kumar Yadav" src="https://i.ibb.co/QP6Nmpf/image-1-about.jpg" alt=""/></Link></figure>
-                     
-                    </div>
-                </div>
-              
-            </div>
-           <div className="sec-title">
-                            <span className="title">Our Future Goal</span>
-                            <h2>We want to lead in innovation & Technology</h2>
-                        </div>
-          <div className="text">
-                We works on UI/UX and functionality as well so that a plugins comes with proper stucture & stunning looks which suits to your web app & website.
-              </div>
-               <div className="text">
-                We take a small toolkit here and ride it well so that it is fit for your use. One who performs well and looks even better.
-              </div>
-               <div className="text">                
-Here we are trying to give you all kinds of technical content, whether it is related to designing or functionality. We are creating content on a lot of languages and will continue to make it free of cost even if you use it without any problem. Which is a very important thing.
-              </div>
-               <div className="text">
-                Here you can also share the content you create, if our technical team likes it, then we will also share it on our blog.
-              </div>
-               <div className="text">
-                
-In the end, I would say keep visiting our website and enjoy the quality content.
-              </div>
-        </div>
-    </section>
+    <div>
+      <h1>About Football Club</h1>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9W0oh7I6pymXSoN1MiOBCWo2IMU9t4XkbXQ&usqp=CAU" />
+      <p>
+        Football Club is a passionate community dedicated to the love and
+        celebration of football. We aim to bring together football enthusiasts
+        from all walks of life to share their passion and knowledge of the
+        beautiful game.
+      </p>
+      <p>
+        Our club was founded on the principles of teamwork, sportsmanship, and
+        the pursuit of excellence. We believe in the power of football to unite
+        people, transcend boundaries, and inspire greatness.
+      </p>
+      <h2>Our Mission</h2>
+      <p>
+        At Football Club, our mission is to promote and develop football at all
+        levels. Whether you are a player, a coach, or a fan, we strive to
+        provide you with a platform to connect, learn, and grow within the
+        football community.
+      </p>
+      <h2>Our Values</h2>
+      <ul>
+        <li>
+          <strong>Passion:</strong> We are driven by our deep love for the game
+          and the joy it brings to our lives.
+        </li>
+        <li>
+          <strong>Inclusivity:</strong> We embrace diversity and welcome
+          individuals from all backgrounds to be a part of our football family.
+        </li>
+        <li>
+          <strong>Respect:</strong> We promote respect for the game, the
+          opponents, and the officials, both on and off the field.
+        </li>
+        <li>
+          <strong>Growth:</strong> We are committed to continuous learning and
+          improvement, both individually and as a collective.
+        </li>
+        <li>
+          <strong>Community:</strong> We foster a sense of belonging and
+          camaraderie among our members, building lasting friendships along the
+          way.
+        </li>
+      </ul>
+      <h2>Get Involved</h2>
+      <p>
+        Whether you're a seasoned player, a budding talent, or simply a football
+        enthusiast, we invite you to join Football Club and be a part of our
+        thriving community. Explore our programs, events, and resources to
+        enhance your football journey.
+      </p>
+      <p>
+        Together, let's celebrate the world's most popular sport and make
+        unforgettable memories on and off the pitch!
+      </p>
     </div>
-  )
+  );
 };
 
-
+export default AboutUs;

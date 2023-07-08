@@ -8,9 +8,11 @@ import Home from './pages/Home/Home'
 import Profile from './ProfilePage/Profile'
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
+import Courses from './components/Courses'
 import Aboutus from './components/Aboutus'
 
-function App() {
+
+export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
@@ -47,12 +49,15 @@ function App() {
           path='/login'
           element={<Login setIsAuthenticated={setIsAuthenticated} />}
         ></Route>
-        <Route path="/Aboutus" element={<Aboutus/>}/>
+        <Route exact path="/Aboutus" element={<Aboutus/>}/>
+        <Route exact path="/courses" element={<Courses/>}/>
       </Routes>
+      
       <Bottom />
+      
     </div>
     
   )
 }
 
-export default App
+

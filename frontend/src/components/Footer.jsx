@@ -1,144 +1,7 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
 
-// export default function Footer(){
-//     return(
-//         <footer class="footer-1 footer-wrap">
-//         <div class="footer-widgets-wrapper theme-bg">
-//             <div class="container">
-//                 <div class="row">
-//                     <div class="col-sm-6 col-xl-3">
-//                         <div class="about-transland pe-md-5 pe-xl-0">
-//                             <a href="index.html">
-//                                 <img src="assets/img/footer-logo.png" alt="transland"/>
-//                             </a>
-//                             <p>Football</p>
-//                         </div>
-//                     </div>
-
-//                     <div class="col-sm-6 col-xl-2">
-//                         <div class="single-footer-wid ps-xl-4">
-//                             <div class="wid-title">
-//                                 <h6>Contact Us</h6>
-//                             </div>
-//                             <ul>
-                                
-//                                 <li><Link to="/Home">RKSS</Link></li>
-//                                 <li><p>football organization</p></li>
-//                                 <li><Link to="/Aboutus">Courses</Link></li>
-//                                 <li><Link to="/Aboutus">Profile</Link></li>
-//                                 <li><Link to="/Aboutus">Blogs</Link></li>
-//                             </ul>
-//                         </div>
-//                     </div>
-
-//                     <div class="col-sm-6 col-xl-2">
-//                         <div class="single-footer-wid ps-xl-2">
-//                             <div class="wid-title">
-//                                 <h6>Our Services</h6>
-//                             </div>
-//                             <ul>
-//                             <li><Link to="/Home">Home</Link></li>
-//                                 <li><Link to="/Aboutus">What We Do</Link></li>
-//                                 <li><Link to="/Aboutus">Courses</Link></li>
-//                                 <li><Link to="/Aboutus">Profile</Link></li>
-//                                 <li><Link to="/Aboutus">Blogs</Link></li>
-//                             </ul>
-//                         </div>
-//                     </div>
-
-//                     {/* <div class="col-sm-6 col-xl-2">
-//                         <div class="single-footer-wid">
-//                             <div class="wid-title">
-//                                 <h6>Industry Sectors</h6>
-//                             </div>
-//                             <ul>
-//                                 <li><a href="#">Electronics Industry</a></li>
-//                                 <li><a href="#">Manufacturing</a></li>
-//                                 <li><a href="#">Semicon & Solar</a></li>
-//                                 <li><a href="#">Oil & Gas Cargo</a></li>
-//                                 <li><a href="#">Energy & Chemicals</a></li>
-//                             </ul>
-//                         </div>
-//                     </div> */}
-
-//                     <div class="col-sm-6 col-xl-3">
-//                         <div class="single-footer-wid site-info-widget">
-//                             <div class="wid-title">
-//                                 <h6>Get In Touch</h6>
-//                             </div>
-//                             <div class="get-in-touch">
-//                                 <div class="single-contact-info">
-//                                     <div class="icon id1">
-//                                         <i class="fal fa-map-marker-alt"></i>
-//                                     </div>
-//                                     <div class="contact-info">
-//                                         <span>94 Roa Malaka, West Jakarta City, UK</span>
-//                                     </div>
-//                                 </div>
-//                                 <div class="single-contact-info">
-//                                     <div class="icon id2">
-//                                         <i class="fal fa-phone"></i>
-//                                     </div>
-//                                     <div class="contact-info">
-//                                         <span>+91-7687287658</span>
-//                                     </div>
-//                                 </div>
-//                                 <div class="single-contact-info">
-//                                     <div class="icon id3">
-//                                         <i class="fal fa-envelope"></i>
-//                                     </div>
-//                                     <div class="contact-info">
-//                                         <span>info@example.com</span>
-//                                     </div>
-//                                 </div>
-//                             </div>
-                            
-
-//                             <div class="newsletter_widget">
-//                                 <div class="newsletter_box">
-//                                     <form action="#">
-//                                         <input type="email" placeholder="Enter email address" required/>
-//                                         <button class="submit-btn" type="submit"><i class="fas fa-envelope-open"></i></button>
-//                                     </form>
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     </div>
-                    
-//                 </div>
-//             </div>
-//         </div>
-
-//         <div class="footer-bottom">
-//             <div class="container align-items-center">
-//                 <div class="bottom-content-wrapper">
-//                     <div class="row">
-//                         <div class="col-md-6 col-12">
-//                             <div class="copy-rights">
-//                                 <p>&copy;2022 <strong></strong>, All Rights Reserved</p>
-//                             </div>
-//                         </div>
-//                         <div class="col-md-6 mt-2 mt-md-0 col-12 text-md-end">
-//                             <div class="social-links">
-//                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-//                                 <a href="#"><i class="fab fa-twitter"></i></a>
-//                                 <a href="#"><i class="fab fa-instagram"></i></a>
-//                                 <a href="#"><i class="fab fa-youtube"></i></a>
-//                                 <a href="#"><i class="fab fa-linkedin"></i></a>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     </footer>   
-
-    
-//     )
-// }
 
 import React from "react"
+import { Link } from "react-router-dom"
 
 export default function Footer(){
     return(
@@ -153,24 +16,24 @@ export default function Footer(){
     </div>
   
     <div>
-      <a href="" class="me-4 text-reset">
+      <Link to="" class="me-4 text-reset">
         <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
+      </Link>
+      <Link to="" class="me-4 text-reset">
         <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
+      </Link>
+      <Link to="" class="me-4 text-reset">
         <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
+      </Link>
+      <Link to="" class="me-4 text-reset">
         <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
+      </Link>
+      <Link to="" class="me-4 text-reset">
         <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
+      </Link>
+      <Link to="" class="me-4 text-reset">
         <i class="fab fa-github"></i>
-      </a>
+      </Link>
     </div>
    
   </section>
@@ -183,62 +46,62 @@ export default function Footer(){
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
          
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
+            <i class="fas fa-gem me-3"></i>Indian Football Foundation
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+            Foundation for coaches to provide quality football training to the youth of india
           </p>
         </div>
        
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
          
           <h6 class="text-uppercase fw-bold mb-4">
-            Products
+            Services
           </h6>
           <p>
-            <a href="#!" class="text-reset">Angular</a>
+            <Link to="/"  class="text-reset">Home</Link>
           </p>
           <p>
-            <a href="#!" class="text-reset">React</a>
+            <Link to="/Aboutus" class="text-reset">About us</Link>
           </p>
           <p>
-            <a href="#!" class="text-reset">Vue</a>
+            <Link to="/" class="text-reset">Courses</Link>
           </p>
           <p>
-            <a href="#!" class="text-reset">Laravel</a>
+            <Link to="/Blogs" class="text-reset">Blogs</Link>
           </p>
         </div>
        
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
          
           <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
+            Useful 
           </h6>
           <p>
-            <a href="#!" class="text-reset">Pricing</a>
+            <Link to="/Courses" class="text-reset">Courses</Link>
           </p>
           <p>
-            <a href="#!" class="text-reset">Settings</a>
+            <Link to="/Blogs" class="text-reset">Blogs</Link>
           </p>
           <p>
-            <a href="#!" class="text-reset">Orders</a>
+            <Link to="/Interview" class="text-reset">Interview</Link>
           </p>
           <p>
-            <a href="#!" class="text-reset">Help</a>
+            <Link to="/Profile" class="text-reset">Profile</Link>
           </p>
         </div>
         
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
   
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <h6 class="text-uppercase fw-bold mb-4">Connect with us</h6>
+          <p><i class="fas fa-home me-3"></i>Khasra No. 382, Third Floor, Village Ghitorni,
+New Delhi – 110030</p>
           <p>
             <i class="fas fa-envelope me-3"></i>
-            info@example.com
+            info@indianfootballfoundation.org
           </p>
           <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          
         </div>
       
       </div>
@@ -248,9 +111,12 @@ export default function Footer(){
 
 
 
-  <div class="text-center p-4">
+
+
+  <div class="text-center p-4" >
+
     © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <Link class="text-reset fw-bold" to="https://mdbootstrap.com/">MDBootstrap.com</Link>
   </div>
 
 </footer>
