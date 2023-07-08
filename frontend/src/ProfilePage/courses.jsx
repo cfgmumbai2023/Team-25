@@ -28,7 +28,9 @@ function CardComponent(props) {
 function Courses() {
   return (
     <>
-      <h1>Your courses</h1>
+      <div className="container d-flex">
+            <button></button>
+      </div>
       <div className="mt-4 d-flex flex-wrap ">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((e) => {
           return (
