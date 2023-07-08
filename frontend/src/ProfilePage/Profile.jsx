@@ -4,22 +4,27 @@ import Courses from "./courses";
 function Profile() {
   const [page, setpage] = useState(true);
   const [details, setDetails] = useState({
-    fullName: "John Doe",
+    firstName: "John",
+    lastName: "Doe",
     email: "johndoe100@gmail.com",
+    type: "Coach",
     sport: "Football",
     yoe: "4",
     phone: "123456789",
-    image: "https://img.freepik.com/premium-vector/man-avatar-profile-round-icon_24640-14044.jpg?w=2000",
-      
+    image:
+      "https://img.freepik.com/premium-vector/man-avatar-profile-round-icon_24640-14044.jpg?w=2000",
   });
   const [tempDetails, setTempDetails] = useState({
-    fullName: details.fullName,
+    firstName: details.firstName,
+    lastName: details.lastName,
     email: details.email,
+    type: details.type,
     sport: details.sport,
     yoe: details.yoe,
     image: details.image,
     phone: details.phone,
   });
+  const [selectedType, setSelectedType] = useState("");
   const onchange = (e) => {
     setTempDetails({ ...details, [e.target.name]: e.target.value });
   };
@@ -28,8 +33,10 @@ function Profile() {
     console.log(tempDetails);
     setDetails(tempDetails);
   };
+
   return (
     <>
+      <div style={{ height: "40px" }}></div>
       <div
         class="modal fade"
         id="exampleModalCenter"
@@ -42,16 +49,29 @@ function Profile() {
           <div class="modal-content px-3 py-3">
             <div>
               <div class="form-group">
-                <label for="exampleInputEmail1">Full Name</label>
+                <label for="exampleInputEmail1">First Name</label>
                 <input
-                  value={tempDetails.fullName}
+                  value={tempDetails.firstName}
                   onChange={onchange}
-                  name="fullName"
+                  name="firstName"
                   type="text"
                   class="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  placeholder="Enter your fullname"
+                  placeholder="Enter your firstname"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail2">Last Name</label>
+                <input
+                  value={tempDetails.lastName}
+                  onChange={onchange}
+                  name="lastName"
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail2"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter your lastname"
                 />
               </div>
               <div class="form-group">
@@ -66,6 +86,33 @@ function Profile() {
                   placeholder="email"
                 />
               </div>
+
+              <div class="form-group">
+                <label for="type">Designation</label>
+                <select
+                  id="type"
+                  name="type"
+                  value={tempDetails.type}
+                  onChange={onchange}
+                  class="form-control"
+                >
+                  <option value="">Select</option>
+                  <option value="Coach">Coach</option>
+                  <option value="Instructor">Instructor</option>
+                </select>
+              </div>
+
+              {/* {selectedType === "Instructor" && (
+        // <button>
+        //   Upload Courses
+        // </button>
+      // )} */}
+
+              {/* {selectedType !== "Instructor" && (
+        <>
+          {/* <h5>Your Achievements</h5>
+          <Achievements /> */}
+              
               <div class="form-group">
                 <label for="exampleInputPassword1">Sports</label>
                 <input
@@ -118,9 +165,12 @@ function Profile() {
         <div className="row">
           <div className="col-8">
             <div className="my-4 text-start py-4 px-4 shadow-lg">
-              <h5>Name: {details.fullName}</h5>
+              <h5>
+                Name: {details.firstName} {details.lastName}
+              </h5>
               <h5>Email: {details.email}</h5>
               <h5>Sport: {details.sport}</h5>
+              <h5>Designation: {details.type}</h5>
               <h5>Years of experience: {details.yoe} years</h5>
             </div>
           </div>
@@ -133,30 +183,23 @@ function Profile() {
                   class="rounded float-right img-thumbnail shadow-lg"
                 ></img>
               </div>
-              <div className="col-4">
-                <button type="button" class="btn btn-danger">
-                  Logout
-                </button>
-              </div>
             </div>
-          
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-toggle="modal"
-                data-target="#exampleModalCenter"
-              >
-                Edit details
-              </button>
-            
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+            >
+              Edit details
+            </button>
           </div>
         </div>
-       
-          <h5>Your Achievements</h5>
-            <Achievements />
-        
-            <Courses />
-         
+
+        <h5>Your Achievements</h5>
+        <Achievements />
+
+        <Courses />
       </div>
     </>
   );
