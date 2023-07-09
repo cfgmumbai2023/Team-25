@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
-import { QuizContext } from '../Helpers/Contexts'
-import { Questions } from '../Helpers/QuestionBank';
+import { QuizContext } from './Contexts'
+import { Questions } from './QuestionBank';
 import '../App.css';
 function EndScreen() {
     const{ score, setScore, setGameState } = useContext(QuizContext);

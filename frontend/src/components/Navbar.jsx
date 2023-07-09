@@ -45,10 +45,10 @@ function Navbar({ isAuthenticated, user }) {
           <Link to='/courses'>Courses</Link>
         </li>
         <li>
-          <Link to='/blogs'>Blogs</Link>
+          <Link to='/calender'>Calender</Link>
         </li>
         <li>
-          <Link to='/interview'>Interview</Link>
+          <Link to='/quiz'>Assessment</Link>
         </li>
         <li>
           <Link to='/profile'>Profile</Link>

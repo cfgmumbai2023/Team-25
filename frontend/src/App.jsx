@@ -10,6 +10,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
 import Courses from './components/Courses'
 import Aboutus from './components/Aboutus'
+import Quiz from './quizComponent/App'
+import Calender from './components/Calendar'
 
 
 export default function App() {
@@ -56,6 +58,9 @@ export default function App() {
         ></Route>
         <Route exact path="/Aboutus" element={<Aboutus/>}/>
         <Route exact path="/courses" element={<Courses/>}/>
+        <Route exact path="/quiz" element={<Quiz/>}/>
+        <Route exact path="/calender" element={<Calender/>}/>
+
       </Routes>
       
       <Bottom />

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/calendar.css"
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
@@ -63,10 +64,10 @@ function CalendarComponent() {
 
   return (
     <div className="App">
-       <h3>You've completed all the sessions!</h3>
+       <h3>Get to know your instructors through a live session</h3>
       <div className="heading">
       
-        <h2>Select a timeslot for your evaluation:</h2>
+        <h2>Select a timeslot:</h2>
       </div>
       <div className="content">
         <input
