@@ -4,7 +4,7 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import QuizIcon from '@mui/icons-material/Quiz';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import CardMembershipIcon from '@mui/icons-material/CardMembership';
-function About() {
+function Aboutus() {
   return (
     <div className="About" >
       <div className='aboutTop' style={{ backgroundImage: `url(${kidsFootball})` }}>
@@ -65,4 +65,4 @@ function About() {
     </div>
   );
 };
-export default About;
+export default Aboutus;
