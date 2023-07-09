@@ -27,6 +27,9 @@ function Feature() {
             image={featureimage2}
             title='Syed Abdul Rahim '
             details='Syed Abdul Rahim, a brilliant coach associated with India National Team in the 50s and 60s and give India many success thus making India Football s golden era. He is the most successful Indian Coach.'
+            image={featureimage2}
+            title='Syed Abdul Rahim '
+            details='Syed Abdul Rahim, a brilliant coach associated with India National Team in the 50s and 60s and give India many success thus making India Football s golden era. He is the most successful Indian Coach.'
           />
           <FeatureBox
             image={featureimage3}
