@@ -1,7 +1,8 @@
 import React from 'react'
 import FeatureBox from './FeatureBox'
 import featureimage1 from '../images/images1.jpeg'
-
+import featureimage2 from '../images/Syed_Abdul_Rahim.jpeg'
+import featureimage3 from '../images/Jarnail_Singh_Dhillon'
 function Feature() {
   const images1 = [
   ];
@@ -22,12 +23,12 @@ function Feature() {
             details='loremipsum'
           />
           <FeatureBox
-            image={featureimage1}
-            title='Igor stimac'
-            details='loremipsum'
+            image={featureimage2}
+            title='Syed Abdul Rahim '
+            details='Syed Abdul Rahim, a brilliant coach associated with India National Team in the 50s and 60s and give India many success thus making India Football s golden era. He is the most successful Indian Coach.'
           />
           <FeatureBox
-            image={featureimage1}
+            image={featureimage3}
             title='Igor stimac'
             details='loremipsum'
           />

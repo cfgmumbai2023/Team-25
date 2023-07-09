@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
 import Courses from './components/Courses'
 import Aboutus from './components/Aboutus'
+import CourseLanding from './components/CourseLanding'
 
 
 export default function App() {
@@ -51,6 +52,7 @@ export default function App() {
         ></Route>
         <Route exact path="/Aboutus" element={<Aboutus/>}/>
         <Route exact path="/courses" element={<Courses/>}/>
+        <Route exact path="/CourseLanding" element={<CourseLanding/>}/>
       </Routes>
       
       <Bottom />
