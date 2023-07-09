@@ -23,7 +23,7 @@ const Courses = (props) => {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <Link to="#" className="btn btn-primary">
+            <Link to="/CourseLanding" className="btn btn-primary">
               Go somewhere
             </Link>
           </div>
