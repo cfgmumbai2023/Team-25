@@ -29,14 +29,7 @@ export default function App() {
   console.log(user)
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'Right',
-        alignItems: 'Right',
-        height: '100vh',
-      }}
-    >
+    <div>
       <Navbar isAuthenticated={isAuthenticated} user={user} />
       <Routes>
         <Route
