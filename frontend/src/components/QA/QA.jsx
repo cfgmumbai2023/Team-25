@@ -1,5 +1,5 @@
 import React from 'react'
-import "../QA.scss"
+import "./QA.scss"
 
 const Table = () => {
   return (
