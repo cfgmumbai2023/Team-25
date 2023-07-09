@@ -1,7 +1,7 @@
 import Sidebar from "../rightbar/rightbar";
-import "../course_id.css";
-import Video from "../../components/Video/chart";
-import QA from "../../components/QA/QA";
+import "./course_id.css";
+import Video from "../Video/chart";
+import QA from "../QA/QA";
 
 const Course = () => {
   return (
