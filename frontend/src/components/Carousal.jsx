@@ -1,58 +1,38 @@
 
-// src/components/bootstrap-carousel.component.js
-import React from "react";
-import { Carousel } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-class BootstrapCarouselComponent extends React.Component {
-render() {
-return (
-<div>
-<div className='container-fluid' >
-<div className="row">
-<div className="col-sm-12">
-
-</div>
-</div>
-<div className="row">
-<div className="col-12">
-<Carousel>
-<Carousel.Item>
-<img
-className="d-block w-100"
-src="https://static.businessworld.in/article/article_extra_large_image/1530602768_Q2MmBQ_Isl-Footbal-League-Mumbai-470.jpg"
-alt="First slide"
-/>
-<Carousel.Caption>
-
-
-</Carousel.Caption>
-</Carousel.Item>
-<Carousel.Item>
-<img
-className="d-block w-100"
-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT76kAPFAzWPjNhYNw6E-ki8cjrtlO-I_jTnQ&usqp=CAU"
-alt="Second slide"
-/>
-<Carousel.Caption>
-
-</Carousel.Caption>
-</Carousel.Item>
-<Carousel.Item>
-<img
-className="d-block w-100"
-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3FTfeK7SFq6h-HAaVhMtrgtQhzHpx4js87qiEefDg4gQjrAb1lfdqxuVfLvs6nMZgj_c&usqp=CAU"
-alt="Third slide"
-/>
-<Carousel.Caption>
-
-</Carousel.Caption>
-</Carousel.Item>
-</Carousel>
-</div>
-</div>
-</div>
+import React from 'react'
+　　　import Carousel from 'react-bootstrap/Carousel';
+　　　import feature1 from '../images/football1.avif'
+import feature2 from '../images/football2.avif'
+import feature3 from '../images/football3.avif'
+　　　
+　　　export default function App() {
+　　　  return (
+　　　    <div>
+　　　        <section className="slider container mb-3">
+　　　        <Carousel>
+　　　      <Carousel.Item className='slide'>
+　　　        <img
+　　　          className="d-block w-100"
+　　　          src= {feature1}
+　　　          alt="First slide"
+　　　        />
+　　　      </Carousel.Item>
+　　　      <Carousel.Item className='slide'>
+　　　        <img
+　　　          className="d-block w-100"
+　　　          src={feature2}
+　　　          alt="Second slide"
+　　　        />
+　　　      </Carousel.Item>
+　　　      <Carousel.Item className='slide'>
+　　　        <img
+　　　          className="d-block w-100"
+　　　          src={feature3}
+　　　          alt="Third slide"
+　　　        />
+　　　      </Carousel.Item>
+　　　    </Carousel>
+　　　    </section>
 </div>
 )
-};
 }
-export default BootstrapCarouselComponent;

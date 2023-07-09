@@ -32,10 +32,15 @@ export default function App() {
 
   return (
    
-    <div >
+    <div style={{
+      display: 'flex',
+      justifyContent: 'Right',
+      alignItems: 'Right',
+      height: '100vh'
+    }}>
       <Navbar isAuthenticated={isAuthenticated} user={user} />
-      <Routes>
-        <Route
+      <Routes >
+        <Route 
           exact
           path='/'
           element={<Home isAuthenticated={isAuthenticated} />}

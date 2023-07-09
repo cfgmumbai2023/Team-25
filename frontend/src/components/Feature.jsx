@@ -13,7 +13,7 @@ function Feature() {
       <div>
         <h1 className='feature-head'>
           A place for you to <span>learn, practice </span>and{' '}
-          <span>show off</span>..
+          <span></span>..
         </h1>
       </div>
       <div id='features'>
