@@ -197,6 +197,20 @@ exports.refresh = (req, res) => {
   //if everything is ok, create new access token, refresh token and send to user
 }
 
+exports.getUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const user = User.find({_id: id});
+
+    if(!user) res.status(404).json("not found");
+
+    res.status(201).json(user);
+
+  } catch (error) {
+    res.status(404).json(error);
+  }
+};
+
 exports.logout = (req, res) => {
   const refreshToken = req.body.token
   refreshTokens = refreshTokens.filter((token) => token !== refreshToken)
