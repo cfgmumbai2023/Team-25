@@ -199,17 +199,16 @@ exports.refresh = (req, res) => {
 
 exports.getUser = async (req, res) => {
   try {
-    const { id } = req.params;
-    const user = User.find({_id: id});
+    const { id } = req.params
+    const user = await User.findOne({ _id: id })
 
-    if(!user) res.status(404).json("not found");
+    if (!user) res.status(404).json('not found')
 
-    res.status(201).json(user);
-
+    res.status(201).json(user)
   } catch (error) {
-    res.status(404).json(error);
+    res.status(404).json(error)
   }
-};
+}
 
 exports.logout = (req, res) => {
   const refreshToken = req.body.token
