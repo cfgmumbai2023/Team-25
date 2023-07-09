@@ -94,3 +94,16 @@ exports.getSingleCourse = async (req, res) => {
         res.status(404).json(error);
     }
 };
+
+exports.getInstructorCourses = async (req, res) => {
+    try {
+        const { instructorId } = req.params;
+        const user = await User.findOne({ _id: instructorId });
+
+        if(!user) res.status(404).json("not found");
+
+        res.status(201).json(user.courses);
+    } catch (error) {
+        res.status(404).json(error);
+    }
+};
