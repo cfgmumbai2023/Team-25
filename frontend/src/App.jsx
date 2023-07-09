@@ -1,17 +1,17 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router'
-import Bottom from './components/Bottom'
 import Navbar from './components/Navbar'
 import Login from './pages/Login/Login'
 import Home from './pages/Home/Home'
 import Profile from './ProfilePage/Profile'
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css'
 import './App.css'
 import Courses from './components/Courses'
 import Aboutus from './components/Aboutus'
+import CourseLanding from './components/CourseLanding'
+import CalendarComponent from './components/Calendar'
 import Quiz from './quizComponent/App'
-import Calender from './components/Calendar'
 
 
 export default function App() {
@@ -32,19 +32,18 @@ export default function App() {
   console.log(user)
 
   return (
-   
-    <div style={{
-      display: 'flex',
-      justifyContent: 'Right',
-      alignItems: 'Right',
-      height: '100vh'
-    }}>
+    <div>
       <Navbar isAuthenticated={isAuthenticated} user={user} />
-      <Routes >
-        <Route 
+      <Routes>
+        <Route
           exact
           path='/'
           element={<Home isAuthenticated={isAuthenticated} />}
+        ></Route>
+        <Route
+          exact
+          path='/courselanding'
+          element={<CourseLanding isAuthenticated={isAuthenticated} />}
         ></Route>
         <Route
           exact
@@ -58,16 +57,11 @@ export default function App() {
         ></Route>
         <Route exact path="/Aboutus" element={<Aboutus/>}/>
         <Route exact path="/courses" element={<Courses/>}/>
+        <Route exact path="/calender" element={<CalendarComponent/>}/>
         <Route exact path="/quiz" element={<Quiz/>}/>
-        <Route exact path="/calender" element={<Calender/>}/>
+
 
       </Routes>
-      
-      <Bottom />
-      
     </div>
-    
   )
 }
-
-

@@ -138,3 +138,7 @@
 .react-datepicker__input-container input::placeholder {
   color: #888;
 }
+
+.App {
+  margin-top: 70px;
+}

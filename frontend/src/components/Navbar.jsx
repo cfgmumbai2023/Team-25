@@ -28,7 +28,7 @@ function Navbar({ isAuthenticated, user }) {
   return (
     <nav className='nav'>
       <Link to='/' className='logo'>
-        {/* <img src={logo} alt='' /> */}<h1 >Football</h1>
+        {/* <img src={logo} alt='' /> */}<h2 >CoachEd</h2>
       </Link>
       <input type='checkbox' className='menu-btn' id='menu-btn' />
       <label className='menu-icon' for='menu-btn'>
